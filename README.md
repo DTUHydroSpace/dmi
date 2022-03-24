@@ -47,26 +47,26 @@ Antal observationer: x
 Skrevet til: 32048.csv
 ```
 
-### Data efter start_dato (fx 31. juni 2021)
+### Data efter start_dato (fx 30. juni 2021)
 ```sh
 (base) $ conda activate dmi
-(dmi) $ dmi 32048 --start 2021-06-31
+(dmi) $ dmi 32048 --start 2021-06-30
 Antal observationer: x
 ...
 Skrevet til: 32048.csv
 ```
 
 
-### Data hentet før end_dato (fx 31. juni 2021)
+### Data hentet før end_dato (fx 30. juni 2021)
 ```sh
 (base) $ conda activate dmi
-(dmi) $ dmi 32048 --end 2021-06-31
+(dmi) $ dmi 32048 --end 2021-06-30
 Antal observationer: x
 ...
 Skrevet til: 32048.csv
 ```
 
-### Data mellem to datoer (fx start 31. juni 2021, end 24. december 2021)
+### Data mellem to datoer (fx start 30. juni 2021, end 24. december 2021)
 ```sh
 (base) $ conda activate dmi
 (dmi) $ dmi 32048 -s 2021-06-30 -e 2021-12-24
