@@ -18,7 +18,6 @@ Hav python og conda installeret:
 ```sh
 (base) $ git clone https://github.com/chris3759/dmi.git
 (base) $ cd dmi 
-(base) $ git chechout 0.1.0
 (base) $ conda env create -f environment.yml
 (base) $ conda activate dmi
 (dmi) $ python -m pip install -e .
