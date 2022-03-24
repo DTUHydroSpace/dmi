@@ -57,7 +57,7 @@ Skrevet til: 32048.csv
 ```
 
 
-### Data hentet efter start_dato (fx 31. juni 2021)
+### Data hentet før end_dato (fx 31. juni 2021)
 ```sh
 (base) $ conda activate dmi
 (dmi) $ dmi 32048 --end 2021-06-31
