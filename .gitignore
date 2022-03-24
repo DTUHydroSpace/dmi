@@ -1,0 +1,4 @@
+src/dmi.egg-info/
+src/__pycache__/
+*.csv
+src/*.csv
