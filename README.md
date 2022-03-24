@@ -14,7 +14,7 @@ Parametre fra stationerne kan ses her: https://confluence.govcloud.dk/pages/view
 
 
 ## Installation
-Hav python og conda installeret:
+Python skal være installeret:
 ```sh
 (base) $ git clone https://github.com/chris3759/dmi.git
 (base) $ cd dmi 
