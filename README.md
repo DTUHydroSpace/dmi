@@ -26,7 +26,7 @@ Generel brug
 ```sh
 Usage: dmi [OPTIONS] STATIONID
 
-  Kommando linjo program til download af tidevand
+  Kommando linje program til download af tidevand
 
 Options:
   -s, --start TEXT
