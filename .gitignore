@@ -2,3 +2,5 @@ src/dmi.egg-info/
 src/__pycache__/
 *.csv
 src/*.csv
+dmiCODE.txt
+src/dmi/__pycache__/
