@@ -8,6 +8,10 @@ For at downloade data skal en nøgle først laves hos DMI. Det gøres ved at fø
 
 Subscribe til oceanObs og gem nøglen i en .txt fil kaldet "dmiCODE.txt" i den mappe som programmet skal køres i. 
 
+En liste over tidevandstationernes nr. kan findes her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015718
+Parametre fra stationerne kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
+
+
 ## Installation
 Hav python og conda installeret:
 ```sh
