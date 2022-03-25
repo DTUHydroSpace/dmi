@@ -1,5 +1,5 @@
 # dmi
-Kommandolinje program til download af vandstand gennem DMI's frie data API. 
+Kommandolinje program til download af vandstand gennem DMI's frie data API. Kan køres gennem fx anaconda eller miniconda prompt.
 
 
 # Installation 
@@ -8,9 +8,9 @@ For at downloade data skal en nøgle først laves hos DMI. Det gøres ved at fø
 
 Subscribe til oceanObs og gem nøglen i en .txt fil kaldet "dmiCODE.txt" i den mappe som programmet skal køres i. 
 
-En liste over tidevandstationernes nr. kan findes her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015718
+En liste over tidevandstationernes nr. kan findes her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015718. Dette nummer bruges som input. 
 
-Parametre fra stationerne kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
+Parametre i output-filer kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
 
 
 ## Installation
@@ -23,7 +23,7 @@ Python skal være installeret:
 (dmi) $ python -m pip install -e .
 (dmi) $
 ```
-
+Husk at lægge "dmiCODE.txt" i den mappe som programmet køres fra. 
 
 # Kommando linje eksempler
 Generel brug
@@ -46,7 +46,7 @@ Antal observationer: x
 Skrevet til: 32048.csv
 ```
 
-### Data efter start_dato (fx 30. juni 2021)
+### Data efter given start dato (fx 30. juni 2021)
 ```sh
 (base) $ conda activate dmi
 (dmi) $ dmi 32048 --start 2021-06-30
@@ -56,10 +56,10 @@ Skrevet til: 32048.csv
 ```
 
 
-### Data hentet før end_dato (fx 30. juni 2021)
+### Data før slut dato (fx 30. juni 2021)
 ```sh
 (base) $ conda activate dmi
-(dmi) $ dmi 32048 --end 2021-06-30
+(dmi) $ dmi 32048 -e 2021-06-30
 Antal observationer: x
 ...
 Skrevet til: 32048.csv
