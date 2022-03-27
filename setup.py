@@ -5,7 +5,7 @@ from setuptools import (
 )
 setup(
     name='dmi',
-    version='0.1.0',
+    version='0.2.0',
     py_modules=['dmi'],
     url = 'https://github.com/chris3759/dmi',
     packages=find_packages(where='src'),
