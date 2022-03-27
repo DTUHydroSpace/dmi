@@ -10,7 +10,7 @@ Subscribe til oceanObs og gem nøglen i en .txt fil kaldet "dmiCODE.txt" i den m
 
 En liste over tidevandstationernes nr. kan findes her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015718. Dette nummer bruges som input. 
 
-Parametre i output-filer kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
+Parametre kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
 
 
 ## Installation
@@ -35,8 +35,13 @@ Usage: dmi [OPTIONS] STATIONID
 Options:
   -s, --start TEXT
   -e, --end TEXT
-  --help            Show this message and exit.
+  -p, --parameterid TEXT
+  --help                  Show this message and exit.
 ```
+Parameter-ID angiver hvilken parameter der skal hentes fra stationen. Default er "Sea level relative to local zero for the station" (sealev_ln). Listen over parametre kan ses her: https://confluence.govcloud.dk/pages/viewpage.action?pageId=30015716
+
+DMI har et maximum for hvor mange observationer der kan leveres. Denne limit er på 300000 observationer. Dvs. skal man hente mere end ca. 5 års data skal man bruge --start og --end kommandoerne for at hente data af flere omgange. 
+
 ### Seneste times vandstand ved stationen 32048 (Tejn)
 ```sh
 (base) $ conda activate dmi
@@ -46,10 +51,10 @@ Antal observationer: x
 Skrevet til: 32048.csv
 ```
 
-### Data efter given start dato (fx 30. juni 2021)
+### Data efter given start dato (fx 30. juni 2021) med dvr90 reference
 ```sh
 (base) $ conda activate dmi
-(dmi) $ dmi 32048 --start 2021-06-30
+(dmi) $ dmi 32048 --start 2021-06-30 -p sealev_dvr
 Antal observationer: x
 ...
 Skrevet til: 32048.csv
@@ -69,7 +74,7 @@ Skrevet til: 32048.csv
 ```sh
 (base) $ conda activate dmi
 (dmi) $ dmi 32048 -s 2021-06-30 -e 2021-12-24
-Antal observationer: 250
+Antal observationer: x
 ...
 Skrevet til: 32048.csv
 ```
