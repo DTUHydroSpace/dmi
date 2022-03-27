@@ -48,7 +48,12 @@ def main(stationid,start,end):
     jdat = data.json()
     jdat = json.dumps(jdat)
     jdat = data.json()
-    f = jdat["features"]
+    try: 
+        f = jdat["features"]
+    except:
+        click.echo("Fejl, tjek input... \nSvar fra request:")
+        click.echo(f"{jdat}")
+        return
     if len(f) == 0:
         click.echo(f"Ingen observationer fundet...")
     else:
