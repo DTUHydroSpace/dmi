@@ -20,7 +20,7 @@ import dmi
 @click.option('--end','-e',default='',type=str)
 
 def main(stationid,start,end):
-    """ Kommando linjo program til download af tidevand """
+    """ Kommando linje program til download af tidevand """
     with open('dmiCODE.txt') as f:
         key = f.readlines()
     if start == '' and end == '':
