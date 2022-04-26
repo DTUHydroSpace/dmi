@@ -53,26 +53,26 @@ def main(stationid,start,end,parameterid):
     jdat = data.json()
 
     try: 
-        f = jdat["features"]
+        ft = jdat["features"]
     except:
         click.echo("Fejl, tjek input... \nSvar fra request:")
         click.echo(f"{jdat}")
         return
 
-    if len(f) == 0:
+    if len(ft) == 0:
         click.echo(f"Ingen observationer fundet...")
     else:
         table = []
-        for i,_ in enumerate(f):
+        for i,_ in enumerate(ft):
             table.append(['nan']*2)
-            table[i][0] = f[i]["properties"]["observed"]
-            table[i][1] = f[i]["properties"]["value"]
+            table[i][0] = "'"+str(ft[i]["properties"]["observed"])+"'"
+            table[i][1] = ft[i]["properties"]["value"]
         
         df = pd.DataFrame(table)
-        click.echo(f"Antal observationer: {len(f)}")
-        if len(f)==300000:
+        click.echo(f"Antal observationer: {len(ft)}")
+        if len(ft)==300000:
             click.echo(f"dmi's limit for observationer er nået. Lav en ny request med de manglende data, ved brug af --start og --end kommandoerne")
-        df.columns = ['Time',f'{parameterid}']
+        df.columns = ['%Time',f'{parameterid}']
         df.to_csv(f'{stationid}.csv',index=False)
         click.echo(f"Skrevet til: {stationid}.csv")
 
